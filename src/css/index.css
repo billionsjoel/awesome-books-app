@@ -1,0 +1,17 @@
+.container {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
