@@ -16,6 +16,16 @@
   margin-top: 0.5rem;
 }
 
+.ml-1 {
+margin-left: 1rem;
+}
+
+.bar {
+  color: #000000;
+  width: 3rem;
+  height: 5rem;
+}
+
 .button {
   width: 7rem;
   height: 2.5rem;
@@ -37,7 +47,7 @@
 
 .books {
     border: 2px solid #000000;
-    padding: 1rem;
+    /*padding: 1rem;*/
     border-radius: 2px;
 }
 .input {
@@ -54,6 +64,7 @@ margin: 0.5rem 0;
 font-size: 1.5rem;
 }
 
+
 .book-author {
 margin: 0.5rem 0;
 }
@@ -62,7 +73,7 @@ margin: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  padding: 1rem;
 }
 
 nav {
@@ -119,4 +130,12 @@ padding: 1rem;
 #contact > ul > li {
   font-size: 1.2rem;
   line-height: 3rem;
+}
+
+.bg-1 {
+  background-color: #ebe8e8;
+}
+
+.bg-2 {
+background-color: #FFFFFF;
 }

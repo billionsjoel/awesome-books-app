@@ -7,6 +7,8 @@ let bookHtml = '';
 let storedBooks =
 	JSON.parse(window.localStorage.getItem('addBookToStorage')) || [];
 let allBooksList = [];
+let backgroundColorChoice = 1;
+let setBookBackgroundColor;
 
 class Book {
 	constructor(id, title, author) {
@@ -22,7 +24,13 @@ class UI {
 		showListNav();
 		if (storedBooks !== null && storedBooks.length > 0) {
 			storedBooks.forEach((book) => {
-				UI.printBook(book);
+				backgroundColorChoice += 1;
+				if (backgroundColorChoice % 2 > 0) {
+					setBookBackgroundColor = 2;
+				} else {
+					setBookBackgroundColor = 1;
+				}
+				UI.printBook(book, setBookBackgroundColor);
 			});
 		} else {
 			bookHtml = ` <div class="book">
@@ -33,16 +41,15 @@ class UI {
 		}
 	}
 
-	static printBook(book) {
+	static printBook(book, setBookBackgroundColor) {
 		bookHtml = `
-      <div class="book">
+      <div class="book bg-${setBookBackgroundColor}">
 		    <div class="book-title">"${book.title}"<span class="book-author"> <small> By:  ${book.author} </small></span>
       </div>
       <div>
           <button class="remove-book button"  onclick="UI.removeBook(${book.id} );"> Remove </button>
       </div>
       </div>
-      <hr>
       `;
 		displayBooksHtml.innerHTML += bookHtml;
 	}
